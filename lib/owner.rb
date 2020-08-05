@@ -52,18 +52,18 @@ class Owner
   end
 
   def walk_dogs
-    self.dogs.map {|dog| dog.mood = "happy"}
+    self.dogs.each { |dog| dog.mood = "happy" }
   end
 
   def feed_cats 
-    self.cats.map { |cat| cat.mood = "happy"}
+    self.cats.each { |cat| cat.mood = "happy" }
   end
 
   def sell_pets 
-    self.dogs.map {|dog| dog.mood = "nervous"}
-    self.cats.map { |cat| cat.mood = "nervous"}
-    self.dogs.map {|dog| dog.owner = nil}
-    self.cats.map { |cat| cat.owner = nil}
+    self.dogs.each { |dog| dog.mood = "nervous" }
+    self.cats.each { |cat| cat.mood = "nervous" }
+    self.dogs.each { |dog| dog.owner = nil }
+    self.cats.each { |cat| cat.owner = nil }
   end
 
   def list_pets 
